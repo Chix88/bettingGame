@@ -8,11 +8,11 @@ namespace bettingGame
 {
     public class Betters
     {
-        public string _money { get; set; }
+        public string Money { get; set; }
 
         public Betters(string money)
         {
-            _money = money;
+           this.Money = money;
         }
     }
 }

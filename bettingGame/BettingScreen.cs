@@ -10,16 +10,24 @@ using System.Windows.Forms;
 
 namespace bettingGame
 {
-    public partial class Form1 : Form
+    public partial class BettingScreen : Form
     {
         private Betters _mike;
+        private Betters _john;
+        private Betters _kim;
         
 
-        public Form1(Betters mike)
+        public BettingScreen(Betters mike,Betters john, Betters kim)
         {
             _mike = mike;
-            InitializeComponent();
-            moneyVar.Text = _mike._money;
+            _john = john;
+            _kim = kim;
+           InitializeComponent();
+
+            mikeMoney.Text = _mike.Money;  // get the 
+            johnMoney.Text = _john.Money;
+            kimMoney.Text = _kim.Money;
+
         }
         ImageRuning[] cats = new ImageRuning[3];
 

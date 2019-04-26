@@ -1,6 +1,6 @@
 ﻿namespace bettingGame
 {
-    partial class Form1
+    partial class BettingScreen
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -44,7 +44,7 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.moneyVar = new System.Windows.Forms.Label();
+            this.johnMoney = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -54,7 +54,7 @@
             this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.mikeMoney = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
@@ -65,7 +65,7 @@
             this.radioButton9 = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.kimMoney = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
@@ -163,7 +163,7 @@
             this.panel1.Controls.Add(this.radioButton1);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.moneyVar);
+            this.panel1.Controls.Add(this.johnMoney);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Enabled = false;
             this.panel1.Location = new System.Drawing.Point(12, 230);
@@ -235,15 +235,14 @@
             this.label9.TabIndex = 5;
             this.label9.Text = "Bet Amount";
             // 
-            // moneyVar
+            // johnMoney
             // 
-            this.moneyVar.AutoSize = true;
-            this.moneyVar.Location = new System.Drawing.Point(93, 4);
-            this.moneyVar.Name = "moneyVar";
-            this.moneyVar.Size = new System.Drawing.Size(88, 13);
-            this.moneyVar.TabIndex = 4;
-            this.moneyVar.Text = "Money you Have";
-            
+            this.johnMoney.AutoSize = true;
+            this.johnMoney.Location = new System.Drawing.Point(93, 4);
+            this.johnMoney.Name = "johnMoney";
+            this.johnMoney.Size = new System.Drawing.Size(88, 13);
+            this.johnMoney.TabIndex = 4;
+            this.johnMoney.Text = "Money you Have";
             // 
             // label8
             // 
@@ -281,7 +280,7 @@
             this.panel2.Controls.Add(this.radioButton6);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.mikeMoney);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.button4);
@@ -343,14 +342,14 @@
             this.label11.TabIndex = 5;
             this.label11.Text = "Bet Amount";
             // 
-            // label12
+            // mikeMoney
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(93, 4);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(88, 13);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "Money you Have";
+            this.mikeMoney.AutoSize = true;
+            this.mikeMoney.Location = new System.Drawing.Point(93, 4);
+            this.mikeMoney.Name = "mikeMoney";
+            this.mikeMoney.Size = new System.Drawing.Size(88, 13);
+            this.mikeMoney.TabIndex = 4;
+            this.mikeMoney.Text = "Money you Have";
             // 
             // label13
             // 
@@ -395,7 +394,7 @@
             this.panel3.Controls.Add(this.radioButton9);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label15);
-            this.panel3.Controls.Add(this.label16);
+            this.panel3.Controls.Add(this.kimMoney);
             this.panel3.Controls.Add(this.label17);
             this.panel3.Controls.Add(this.label18);
             this.panel3.Controls.Add(this.button6);
@@ -457,14 +456,14 @@
             this.label15.TabIndex = 5;
             this.label15.Text = "Bet Amount";
             // 
-            // label16
+            // kimMoney
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(93, 4);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(88, 13);
-            this.label16.TabIndex = 4;
-            this.label16.Text = "Money you Have";
+            this.kimMoney.AutoSize = true;
+            this.kimMoney.Location = new System.Drawing.Point(93, 4);
+            this.kimMoney.Name = "kimMoney";
+            this.kimMoney.Size = new System.Drawing.Size(88, 13);
+            this.kimMoney.TabIndex = 4;
+            this.kimMoney.Text = "Money you Have";
             // 
             // label17
             // 
@@ -594,7 +593,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label moneyVar;
+        private System.Windows.Forms.Label johnMoney;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.RadioButton radioButton3;
@@ -607,7 +606,7 @@
         private System.Windows.Forms.RadioButton radioButton6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label mikeMoney;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button4;
@@ -618,7 +617,7 @@
         private System.Windows.Forms.RadioButton radioButton9;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label kimMoney;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button button6;

@@ -12,7 +12,9 @@ namespace bettingGame
 {
     public partial class StartingCash : Form
     {
+        private Betters _john;
         private Betters _mike;
+        private Betters _kim;
         public StartingCash()
         {
             InitializeComponent();
@@ -21,8 +23,11 @@ namespace bettingGame
         private void button1_Click(object sender, EventArgs e)
         {
 
-            _john = new Betters(mikeCash.Text);
-            var trans = new Form1(_mike);
+            _mike = new Betters(mikeCash.Text);
+            _john = new Betters(johnCash.Text);
+            _kim = new Betters(kimCash.Text);
+
+            var trans = new BettingScreen(_mike,_john,_kim);
             trans.Show();
             
            

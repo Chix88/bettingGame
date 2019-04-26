@@ -46,11 +46,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Betters.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="BettingScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="BettingScreen.Designer.cs">
+      <DependentUpon>BettingScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="ImageRuning.cs" />
     <Compile Include="InitialCashTransmitter.cs" />
@@ -62,8 +62,8 @@
     <Compile Include="StartingCash.Designer.cs">
       <DependentUpon>StartingCash.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="BettingScreen.resx">
+      <DependentUpon>BettingScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
