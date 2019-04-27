@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
@@ -74,44 +71,19 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.label20 = new System.Windows.Forms.Label();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.cat3 = new System.Windows.Forms.PictureBox();
+            this.cat2 = new System.Windows.Forms.PictureBox();
+            this.cat1 = new System.Windows.Forms.PictureBox();
+            this.finishLine = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cat3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cat2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cat1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.finishLine)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::bettingGame.Properties.Resources._5cRKzza9i;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 51);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::bettingGame.Properties.Resources._5cRKzza9i;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 69);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::bettingGame.Properties.Resources._5cRKzza9i;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 126);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
             // 
             // button1
             // 
@@ -541,11 +513,53 @@
             this.checkBox3.UseVisualStyleBackColor = true;
             this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
             // 
-            // Form1
+            // cat3
+            // 
+            this.cat3.Image = global::bettingGame.Properties.Resources.runningCat;
+            this.cat3.Location = new System.Drawing.Point(12, 126);
+            this.cat3.Name = "cat3";
+            this.cat3.Size = new System.Drawing.Size(100, 50);
+            this.cat3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cat3.TabIndex = 2;
+            this.cat3.TabStop = false;
+            // 
+            // cat2
+            // 
+            this.cat2.Image = global::bettingGame.Properties.Resources.runningCat;
+            this.cat2.Location = new System.Drawing.Point(12, 69);
+            this.cat2.Name = "cat2";
+            this.cat2.Size = new System.Drawing.Size(100, 50);
+            this.cat2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cat2.TabIndex = 1;
+            this.cat2.TabStop = false;
+            // 
+            // cat1
+            // 
+            this.cat1.BackColor = System.Drawing.SystemColors.Window;
+            this.cat1.Image = global::bettingGame.Properties.Resources.blackCat;
+            this.cat1.Location = new System.Drawing.Point(12, 12);
+            this.cat1.Name = "cat1";
+            this.cat1.Size = new System.Drawing.Size(100, 51);
+            this.cat1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cat1.TabIndex = 0;
+            this.cat1.TabStop = false;
+            // 
+            // finishLine
+            // 
+            this.finishLine.Image = global::bettingGame.Properties.Resources.images;
+            this.finishLine.Location = new System.Drawing.Point(718, 12);
+            this.finishLine.Name = "finishLine";
+            this.finishLine.Size = new System.Drawing.Size(38, 179);
+            this.finishLine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.finishLine.TabIndex = 7;
+            this.finishLine.TabStop = false;
+            this.finishLine.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // BettingScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Window;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(805, 334);
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.checkBox2);
@@ -560,14 +574,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Name = "Form1";
+            this.Controls.Add(this.cat3);
+            this.Controls.Add(this.cat2);
+            this.Controls.Add(this.cat1);
+            this.Controls.Add(this.finishLine);
+            this.Name = "BettingScreen";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.Load += new System.EventHandler(this.BettingScreen_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
@@ -575,6 +588,10 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cat3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cat2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cat1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.finishLine)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -582,9 +599,9 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox cat1;
+        private System.Windows.Forms.PictureBox cat2;
+        private System.Windows.Forms.PictureBox cat3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;
@@ -627,6 +644,7 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.PictureBox finishLine;
     }
 }
 

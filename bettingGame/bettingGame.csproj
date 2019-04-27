@@ -94,5 +94,14 @@
   <ItemGroup>
     <None Include="Resources\5cRKzza9i.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\runningCat.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blackCat.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

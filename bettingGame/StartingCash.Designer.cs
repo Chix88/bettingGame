@@ -35,29 +35,30 @@
             this.johnCash = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.kimCash = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(366, 179);
+            this.button1.Location = new System.Drawing.Point(135, 168);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(103, 53);
             this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
+            this.button1.Text = "Go To The Betting Screen";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // mikeCash
             // 
-            this.mikeCash.Location = new System.Drawing.Point(341, 50);
+            this.mikeCash.Location = new System.Drawing.Point(112, 50);
             this.mikeCash.Name = "mikeCash";
-            this.mikeCash.Size = new System.Drawing.Size(100, 20);
+            this.mikeCash.Size = new System.Drawing.Size(137, 20);
             this.mikeCash.TabIndex = 1;
             // 
             // johnLabel
             // 
             this.johnLabel.AutoSize = true;
-            this.johnLabel.Location = new System.Drawing.Point(252, 53);
+            this.johnLabel.Location = new System.Drawing.Point(35, 53);
             this.johnLabel.Name = "johnLabel";
             this.johnLabel.Size = new System.Drawing.Size(30, 13);
             this.johnLabel.TabIndex = 2;
@@ -66,7 +67,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(252, 101);
+            this.label1.Location = new System.Drawing.Point(35, 101);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(30, 13);
             this.label1.TabIndex = 2;
@@ -74,35 +75,45 @@
             // 
             // johnCash
             // 
-            this.johnCash.Location = new System.Drawing.Point(341, 98);
+            this.johnCash.Location = new System.Drawing.Point(112, 98);
             this.johnCash.Name = "johnCash";
-            this.johnCash.Size = new System.Drawing.Size(100, 20);
+            this.johnCash.Size = new System.Drawing.Size(137, 20);
             this.johnCash.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(252, 145);
+            this.label2.Location = new System.Drawing.Point(35, 145);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 13);
+            this.label2.Size = new System.Drawing.Size(24, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "John";
+            this.label2.Text = "Kim";
             // 
             // kimCash
             // 
-            this.kimCash.Location = new System.Drawing.Point(341, 142);
+            this.kimCash.Location = new System.Drawing.Point(112, 142);
             this.kimCash.Name = "kimCash";
-            this.kimCash.Size = new System.Drawing.Size(100, 20);
+            this.kimCash.Size = new System.Drawing.Size(137, 20);
             this.kimCash.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(52, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(252, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "How Much Money Do You Want To Put To Gamble";
             // 
             // StartingCash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 250);
+            this.ClientSize = new System.Drawing.Size(353, 250);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.kimCash);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.johnLabel);
             this.Controls.Add(this.johnCash);
             this.Controls.Add(this.mikeCash);
@@ -123,5 +134,6 @@
         private System.Windows.Forms.TextBox johnCash;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox kimCash;
+        private System.Windows.Forms.Label label3;
     }
 }
