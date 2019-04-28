@@ -16,6 +16,7 @@ namespace bettingGame
         private Betters _john;
         private Betters _kim;
         private bool _timerIsRunning;
+        private int _WiningCat;
 
 
         public BettingScreen(Betters mike, Betters john, Betters kim)
@@ -45,10 +46,9 @@ namespace bettingGame
         private void button1_Click(object sender, EventArgs e)
         {
             ToggleRace(0, cat1);
-
             ToggleRace(1, cat2);
-
             ToggleRace(2, cat3);
+
 
         }
 
@@ -64,6 +64,7 @@ namespace bettingGame
                         timer1.Stop();
                         _timerIsRunning = false;
                         CheckWiningCat();
+                        WinnerBet();
 
                     }
                 }
@@ -106,13 +107,15 @@ namespace bettingGame
                 {
                     if (cat1.Left > cat3.Left)
                     {
-                        //cat1 win
+                        
                         MessageBox.Show("Cat1 Win");
+                        _WiningCat = 1;
                     }
                     else
                     {
                         //cat3 win
                         MessageBox.Show("Cat3 Win");
+                        _WiningCat = 3;
                     }
                 }
                 else if (cat2.Left > cat1.Left)
@@ -121,11 +124,13 @@ namespace bettingGame
                     {
                         //cat2 win
                         MessageBox.Show("Cat2 Win");
+                        _WiningCat = 2;
                     }
                     else
                     {
                         //cat3 win
                         MessageBox.Show("Cat3 Win");
+                        _WiningCat = 3;
                     }
                 }
                 else if (cat1.Left > cat3.Left)
@@ -134,13 +139,39 @@ namespace bettingGame
                     {
                         //cat1 win  
                         MessageBox.Show("Cat1 Win");
+                        _WiningCat = 1;
                     }
                     else
                     {
                         //cat2 win
                         MessageBox.Show("Cat2 Win");
+                        _WiningCat = 2;
                     }
                 }
+
+        }
+
+        public void WinnerBet()
+        {
+            if (radioButton1.Checked && radioButton1.Text == _WiningCat.ToString())
+            {
+                _john.Win((int)numericUpDown1.Value);
+                johnMoney.Text = _john.Money;
+            }
+            else if (radioButton2.Checked && radioButton2.Text == _WiningCat.ToString())
+            {
+                _john.Win((int)numericUpDown1.Value);
+                johnMoney.Text = _john.Money;
+            }
+            else if (radioButton3.Checked && radioButton3.Text == _WiningCat.ToString())
+            {
+                _john.Win((int)numericUpDown1.Value);
+                johnMoney.Text = _john.Money;
+            }
+            else
+            {
+                //_john.loose();
+            }
 
         }
     }

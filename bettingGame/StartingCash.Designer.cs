@@ -50,7 +50,7 @@
             // 
             // mikeCash
             // 
-            this.mikeCash.Location = new System.Drawing.Point(112, 50);
+            this.mikeCash.Location = new System.Drawing.Point(112, 102);
             this.mikeCash.Name = "mikeCash";
             this.mikeCash.Size = new System.Drawing.Size(137, 20);
             this.mikeCash.TabIndex = 1;
@@ -58,7 +58,7 @@
             // johnLabel
             // 
             this.johnLabel.AutoSize = true;
-            this.johnLabel.Location = new System.Drawing.Point(35, 53);
+            this.johnLabel.Location = new System.Drawing.Point(35, 109);
             this.johnLabel.Name = "johnLabel";
             this.johnLabel.Size = new System.Drawing.Size(30, 13);
             this.johnLabel.TabIndex = 2;
@@ -67,7 +67,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 101);
+            this.label1.Location = new System.Drawing.Point(35, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(30, 13);
             this.label1.TabIndex = 2;
@@ -75,7 +75,7 @@
             // 
             // johnCash
             // 
-            this.johnCash.Location = new System.Drawing.Point(112, 98);
+            this.johnCash.Location = new System.Drawing.Point(112, 59);
             this.johnCash.Name = "johnCash";
             this.johnCash.Size = new System.Drawing.Size(137, 20);
             this.johnCash.TabIndex = 1;

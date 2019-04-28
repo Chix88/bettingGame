@@ -9,10 +9,20 @@ namespace bettingGame
     public class Betters
     {
         public string Money { get; set; }
+        public bool _isBetting;
+        public int _moneyToBet;
 
         public Betters(string money)
         {
            this.Money = money;
         }
+
+        public void Win(int amount)
+        {
+            Money = Money + amount;
+        }
+
+       
+
     }
 }
