@@ -23,9 +23,9 @@ namespace bettingGame
         private void button1_Click(object sender, EventArgs e)
         {
 
-            _mike = new Betters(mikeCash.Text);
-            _john = new Betters(johnCash.Text);
-            _kim = new Betters(kimCash.Text);
+            _mike = new Betters((int)mikeStartingMoney.Value);
+            _john = new Betters((int)johnStartingMoney.Value);
+            _kim = new Betters((int)kimStartingMoney.Value);
 
             var trans = new BettingScreen(_mike,_john,_kim);
             trans.Show();

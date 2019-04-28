@@ -8,18 +8,23 @@ namespace bettingGame
 {
     public class Betters
     {
-        public string Money { get; set; }
+        public int Money { get; set; }
         public bool _isBetting;
         public int _moneyToBet;
 
-        public Betters(string money)
+        public Betters(int money)
         {
            this.Money = money;
         }
 
         public void Win(int amount)
         {
-            Money = Money + amount;
+            Money += amount;
+        }
+
+        public void Loose(int amount)
+        {
+            Money -= amount;
         }
 
        

@@ -553,7 +553,6 @@
             this.finishLine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.finishLine.TabIndex = 7;
             this.finishLine.TabStop = false;
-            this.finishLine.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // BettingScreen
             // 
@@ -580,7 +579,6 @@
             this.Controls.Add(this.finishLine);
             this.Name = "BettingScreen";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.BettingScreen_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();

@@ -1,22 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace bettingGame
 {
     public partial class BettingScreen : Form
     {
-        private Betters _mike;
-        private Betters _john;
-        private Betters _kim;
+        private readonly Betters _mike;
+        private readonly Betters _john;
+        private readonly Betters _kim;
         private bool _timerIsRunning;
-        private int _WiningCat;
+        private int _winingCat;
 
 
         public BettingScreen(Betters mike, Betters john, Betters kim)
@@ -26,20 +19,20 @@ namespace bettingGame
             _kim = kim;
             InitializeComponent();
 
-            mikeMoney.Text = _mike.Money; // get the 
-            johnMoney.Text = _john.Money;
-            kimMoney.Text = _kim.Money;
+            mikeMoney.Text = _mike.Money.ToString(); // get the 
+            johnMoney.Text = _john.Money.ToString();
+            kimMoney.Text = _kim.Money.ToString();
 
         }
 
-        ImageRuning[] cats = new ImageRuning[3];
+        readonly ImageRuning[] _cats = new ImageRuning[3];
 
         private void ToggleRace(int index, PictureBox catBox)
         {
-            if (cats[index] == null)
+            if (_cats[index] == null)
             {
-                cats[index] = new ImageRuning();
-                cats[index].NewPicture = catBox;
+                _cats[index] = new ImageRuning();
+                _cats[index].NewPicture = catBox;
             }
         }
 
@@ -56,10 +49,10 @@ namespace bettingGame
         {
             for (int i = 0; i < 3; i++)
             {
-                if (cats[i] != null)
+                if (_cats[i] != null)
                 {
-                    cats[i].Move();
-                    if (cats[i].racing == false)
+                    _cats[i].Move();
+                    if (_cats[i].racing == false)
                     {
                         timer1.Stop();
                         _timerIsRunning = false;
@@ -88,15 +81,6 @@ namespace bettingGame
             }
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BettingScreen_Load(object sender, EventArgs e)
-        {
-
-        }
 
         public void CheckWiningCat()
         {
@@ -107,15 +91,15 @@ namespace bettingGame
                 {
                     if (cat1.Left > cat3.Left)
                     {
-                        
-                        MessageBox.Show("Cat1 Win");
-                        _WiningCat = 1;
+
+                        MessageBox.Show(@"Cat1 Win");
+                        _winingCat = 1;
                     }
                     else
                     {
                         //cat3 win
-                        MessageBox.Show("Cat3 Win");
-                        _WiningCat = 3;
+                        MessageBox.Show(@"Cat3 Win");
+                        _winingCat = 3;
                     }
                 }
                 else if (cat2.Left > cat1.Left)
@@ -123,14 +107,14 @@ namespace bettingGame
                     if (cat2.Left > cat3.Left)
                     {
                         //cat2 win
-                        MessageBox.Show("Cat2 Win");
-                        _WiningCat = 2;
+                        MessageBox.Show(@"Cat2 Win");
+                        _winingCat = 2;
                     }
                     else
                     {
                         //cat3 win
-                        MessageBox.Show("Cat3 Win");
-                        _WiningCat = 3;
+                        MessageBox.Show(@"Cat3 Win");
+                        _winingCat = 3;
                     }
                 }
                 else if (cat1.Left > cat3.Left)
@@ -138,14 +122,14 @@ namespace bettingGame
                     if (cat1.Left > cat2.Left)
                     {
                         //cat1 win  
-                        MessageBox.Show("Cat1 Win");
-                        _WiningCat = 1;
+                        MessageBox.Show(@"Cat1 Win");
+                        _winingCat = 1;
                     }
                     else
                     {
                         //cat2 win
-                        MessageBox.Show("Cat2 Win");
-                        _WiningCat = 2;
+                        MessageBox.Show(@"Cat2 Win");
+                        _winingCat = 2;
                     }
                 }
 
@@ -153,24 +137,29 @@ namespace bettingGame
 
         public void WinnerBet()
         {
-            if (radioButton1.Checked && radioButton1.Text == _WiningCat.ToString())
+            if (checkBox1.Checked)
             {
-                _john.Win((int)numericUpDown1.Value);
-                johnMoney.Text = _john.Money;
-            }
-            else if (radioButton2.Checked && radioButton2.Text == _WiningCat.ToString())
-            {
-                _john.Win((int)numericUpDown1.Value);
-                johnMoney.Text = _john.Money;
-            }
-            else if (radioButton3.Checked && radioButton3.Text == _WiningCat.ToString())
-            {
-                _john.Win((int)numericUpDown1.Value);
-                johnMoney.Text = _john.Money;
-            }
-            else
-            {
-                //_john.loose();
+
+                if (radioButton1.Checked && radioButton1.Text == _winingCat.ToString())
+                {
+                    _john.Win((int)numericUpDown1.Value);
+                    johnMoney.Text = _john.Money.ToString();
+                }
+                else if (radioButton2.Checked && radioButton2.Text == _winingCat.ToString())
+                {
+                    _john.Win((int)numericUpDown1.Value);
+                    johnMoney.Text = _john.Money.ToString();
+                }
+                else if (radioButton3.Checked && radioButton3.Text == _winingCat.ToString())
+                {
+                    _john.Win((int)numericUpDown1.Value);
+                    johnMoney.Text = _john.Money.ToString();
+                }
+                else
+                {
+                    _john.Loose((int)numericUpDown1.Value);
+                    johnMoney.Text = _john.Money.ToString();//_john.loose();
+                }
             }
 
         }
